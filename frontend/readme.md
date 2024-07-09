@@ -21,9 +21,12 @@ List of things to try:
   - ~~inner text~~
   - ~~listeners~~
   - ~~reactivness~~
-- routes
-  - using direct url to access page (might be vite issue)
-- app container
+- ~~routes~~
+  - using direct url to access page not working (might be vite issue)
+- ~~app container~~
 - notifications
+  - websockets + background worker
+    - need to test if android just maintains websocket connection on its own
+  - google firebase
 - barcode scanner
 - rpc
