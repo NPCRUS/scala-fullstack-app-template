@@ -1,0 +1,26 @@
+{
+  "name": "neo-monarh-stock",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx vite serve ./frontend/resources",
+    "build": "npx vite build ./frontend/resources --outDir ../../dest --emptyOutDir"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/dialog": "^6.0.0",
+    "@capacitor/local-notifications": "^6.0.0",
+    "@ionic/core": "^8.2.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.0",
+    "@ionic/cli": "^7.2.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1"
+  }
+}

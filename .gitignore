@@ -1,0 +1,10 @@
+.bloop
+.bsp
+.idea
+.metals
+.vscode
+
+android
+dest
+node_modules
+out
