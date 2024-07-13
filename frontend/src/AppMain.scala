@@ -7,8 +7,6 @@ import Router.*
 import org.scalajs.dom.{MessageEvent, WebSocket}
 import typings.capacitorDialog.distEsmDefinitionsMod.AlertOptions
 import typings.capacitorDialog.mod.Dialog
-import typings.capacitorLocalNotifications.distEsmDefinitionsMod.{LocalNotificationSchema, ScheduleOptions, ScheduleResult}
-import typings.capacitorLocalNotifications.mod.*
 import typings.capacitorApp.mod.App as CapacitorApp
 import typings.capacitorApp.capacitorAppStrings.backButton
 

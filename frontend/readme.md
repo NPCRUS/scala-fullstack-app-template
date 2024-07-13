@@ -15,6 +15,9 @@ Dev setup:
    - `mill --watch frontend.fastLinkJS`
    - `npm run dev`
 
+Requirements:
+    - `android/app/google-services.json` for push notifications support
+
 List of things to try:
 - ~~web components~~
 - ~~facade for iconic component~~
@@ -24,9 +27,6 @@ List of things to try:
 - ~~routes~~
   - using direct url to access page not working (might be vite issue)
 - ~~app container~~
-- notifications
-  - websockets + background worker
-    - need to test if android just maintains websocket connection on its own
-  - google firebase
+- ~~notifications (through google fcm)~~
 - barcode scanner
 - rpc
