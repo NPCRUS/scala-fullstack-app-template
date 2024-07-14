@@ -9,6 +9,7 @@ object Router {
     case object IonicTest extends Page
     case object BeFeDataTest extends Page
     case object NotificationTest extends Page
+    case object RpcTest extends Page
   }
   import Page.*
 
@@ -18,9 +19,12 @@ object Router {
     Route.static(BeFeDataTest, root / "beFeDataTest")
   private val notificationTest =
     Route.static(NotificationTest, root / "notificationTest")
+  private val rpcTestRoute =
+    Route.static(RpcTest, root / "rpcTest")
 
   val router = new Router[Page](
-    routes = List(mainRoute, ionicTestRoute, beFeDataIntegrationTestRoute, notificationTest),
+    routes = List(mainRoute, ionicTestRoute, beFeDataIntegrationTestRoute,
+      notificationTest, rpcTestRoute),
     getPageTitle = _.toString,
     serializePage = _.toString,
     deserializePage = {
@@ -28,6 +32,7 @@ object Router {
       case "IonicTest" => IonicTest
       case "BeFeDataTest" => BeFeDataTest
       case "NotificationTest" => NotificationTest
+      case "RpcTest" => RpcTest
     }
   )(
     popStateEvents = L.windowEvents(_.onPopState),

@@ -2,7 +2,7 @@ import org.scalajs.dom
 import com.raquo.laminar.api.L.{*, given}
 import com.raquo.laminar.tags.HtmlTag
 import com.raquo.waypoint.SplitRender
-import pages.{BeFeDataIntegrationTestPage, IonicTestPage, NotificationTest}
+import pages.*
 import Router.*
 import org.scalajs.dom.{MessageEvent, WebSocket}
 import typings.capacitorDialog.distEsmDefinitionsMod.AlertOptions
@@ -40,6 +40,12 @@ object AppMain extends App {
         margin := "5px",
         onClick --> (_ => router.pushState(Page.NotificationTest)),
         "Notification test"
+      ),
+      button(
+        padding := "5px",
+        margin := "5px",
+        onClick --> (_ => router.pushState(Page.RpcTest)),
+        "Rpc test"
       )
     )
   )
@@ -49,6 +55,7 @@ object AppMain extends App {
     .collectStatic(Page.BeFeDataTest)(BeFeDataIntegrationTestPage.render)
     .collectStatic(Page.IonicTest)(IonicTestPage.render)
     .collectStatic(Page.NotificationTest)(NotificationTest.render)
+    .collectStatic(Page.RpcTest)(RpcTest.render)
 
   val appElement = ionic.App(
     _.slots.inner(

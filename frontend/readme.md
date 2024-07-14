@@ -29,4 +29,4 @@ List of things to try:
 - ~~app container~~
 - ~~notifications (through google fcm)~~
 - barcode scanner
-- rpc
+- ~~rpc (sloth)~~
