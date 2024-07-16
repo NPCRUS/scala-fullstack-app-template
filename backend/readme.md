@@ -1,3 +1,4 @@
 List of things to try:
-  - ~~zio http~~
+  - ~~zio~~
   - ~~rpc (sloth)~~
+  - ~~quill~~

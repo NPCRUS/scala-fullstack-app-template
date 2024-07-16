@@ -8,4 +8,6 @@ case class TestInput(id: Int, title: String) derives Codec
 
 trait TestApi {
   def createFlat(entity: TestInput): Future[Int]
+
+  def testCount: Future[Int]
 }

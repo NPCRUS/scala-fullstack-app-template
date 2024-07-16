@@ -21,7 +21,7 @@ object ZioHttpServer extends ZIOAppDefault {
   val routes =
     Routes(
       Method.GET / Root / "health" -> Handler.text("alive"),
-      Method.POST / Root / "api" / string("api") / string ("method") ->
+      Method.POST / Root / "rpc" / string("api") / string ("method") ->
         handler { (api: String, method: String, request: Request) =>
           for {
             entityStr <- request.body.asString(Charsets.Utf8)

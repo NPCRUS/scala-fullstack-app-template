@@ -20,7 +20,7 @@ object RpcTest {
   object Transport extends RequestTransport[Json, Future] {
     override def apply(request: Request[Json]): Future[Json] =
       dom.fetch(
-        s"http://localhost:3500/api/${request.method.traitName}/${request.method.methodName}",
+        s"http://localhost:3500/rpc/${request.method.traitName}/${request.method.methodName}",
         new RequestInit {
           method = HttpMethod.POST
           body = request.payload.noSpaces

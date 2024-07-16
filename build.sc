@@ -14,25 +14,25 @@ object shared extends Module {
 
     object jvm extends PlatformScalaModule {
         def scalaVersion = "3.4.2"
-
-        override def ivyDeps = deps ++ Agg(
-            ivy"dev.zio::zio::2.1.6",
-            ivy"dev.zio::zio-http::3.0.0-RC7",
-        )
+        override def ivyDeps = deps
     }
+
     object js extends PlatformScalaModule with ScalaJSModule {
         def scalaVersion = "3.4.2"
         def scalaJSVersion = "1.16.0"
 
-        override def ivyDeps = deps ++ Agg(
-            ivy"com.github.cornerman::sloth-jsdom-client::0.8.0"
-        )
+        override def ivyDeps = deps
     }
 }
 
 object backend extends ScalaModule {
     def scalaVersion = "3.4.2"
     override def moduleDeps = Seq(shared.jvm)
+    override def ivyDeps = Agg(
+        ivy"dev.zio::zio-http::3.0.0-RC7",
+        ivy"org.postgresql:postgresql::42.2.8",
+        ivy"io.getquill::quill-jdbc::4.8.5",
+    )
 }
 
 object frontend extends ScalaJSModule {
