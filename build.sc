@@ -45,7 +45,8 @@ object frontend extends ScalaJSModule {
     override def ivyDeps = Agg(
         ivy"org.scala-js::scalajs-dom::2.8.0",
         ivy"com.raquo::laminar::17.0.0",
-        ivy"com.raquo::waypoint::8.0.0"
+        ivy"com.raquo::waypoint::8.0.0",
+        ivy"com.github.cornerman::sloth-jsdom-client::0.8.0"
     )
     override def moduleKind: Target[ModuleKind] = ModuleKind.ESModule
 
